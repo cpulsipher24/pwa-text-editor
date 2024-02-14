@@ -4,12 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start:dev": "nodemon server.js --ignore client",
+    "start": "node server.js",
+    "build": "webpack --mode production",
+    "install": "webpack --watch",
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +19,8 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
   }
 }
